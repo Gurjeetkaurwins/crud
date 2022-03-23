@@ -2,9 +2,11 @@
 include_once("../DB/config.php");
 include_once('..//Model/profile.php');
 include_once('../Pages/header.php');
-session_start();
+
 ?>
+
 <div class="container">
+
     <div class="row justify-content-center my-5">
         <div class="col-md-8">
         

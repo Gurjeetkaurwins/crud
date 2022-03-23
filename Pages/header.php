@@ -37,7 +37,12 @@
                     </a>
                 </li>
             </ul>
-            <span class="navbar-text">
+            <?php
+         // session_start();
+             // hide login and sign up buttons
+            if( empty($_SESSION ['first_name']) ){
+             ?>
+ <span class="navbar-text">
                 <a href="./login.php">
                 <button type="button" class="btn btn-outline-light mx-1">Login</button>
             </a>
@@ -47,10 +52,23 @@
                 <button type="button" class="btn btn-outline-light mx-1">Sign up</button>
             </a>
             </span>
+            <?php } else{
+            ?>
+           
+            <?php
+           // session_start();
+           //redirect logout button to login page
+            if(empty($_SESSION['logout'])){
+                
+                          ?>
             <span class="navbar-text">
                 <a href="./register.php">
                 <button type="button" class="btn btn-outline-light mx-1">Logout</button>
             </a>
+            <?php } else {
+                ?>
             </span>
+            <?php } ?>
+            <?php } ?>
         </div>
     </nav>
